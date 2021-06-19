@@ -1,10 +1,9 @@
 
+import HomeScreen from './Container/HomeScreen'
 function App() {
   return (
     <div>
-      <header>
-        hello world
-      </header>
+      <HomeScreen/>
     </div>
   );
 }
