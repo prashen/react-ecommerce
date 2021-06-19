@@ -1,11 +1,7 @@
+import AppNavigator from './Navigators/AppNavigator';
 
-import HomeScreen from './Container/HomeScreen'
 function App() {
-  return (
-    <div>
-      <HomeScreen/>
-    </div>
-  );
+  return <AppNavigator />
 }
 
 export default App;
