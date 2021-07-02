@@ -1,0 +1,8 @@
+.menuItem{
+  /* padding:10px;
+  display: inline-block; */
+}
+a.header_active_menu.active {
+  font-weight: "bold";
+  color: red!important;
+}

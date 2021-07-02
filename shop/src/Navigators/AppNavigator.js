@@ -3,6 +3,8 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import GlobalStyle from '../global-styles';
+import {Container, Row} from 'react-bootstrap';
 import { Header, Footer } from '../Components'
 import HomeScreen from '../Container/HomeScreen'
 import AboutScreen from '../Container/AboutScreen'
@@ -12,26 +14,20 @@ function AppNavigator() {
   return (
     <Router>
       <div>
+        <GlobalStyle />
         <Header />
 
-        <div>
-          <Switch>
-            <Route exact path="/" component={HomeScreen} />
-            <Route path="/about" component={AboutScreen} />
-            <Route component={NotFoundScreen} />
-
-
-            {/* <Route path="/about">
-            <AboutScreen />
-          </Route>
-          <Route path="/">
-            <HomeScreen />
-          </Route>
-          <Route>
-            <NotFoundScreen />
-          </Route> */}
-          </Switch>
-        </div>
+        <section className="container">
+        <Container fluid="lg">
+          <Row>
+            <Switch>
+              <Route exact path="/" component={HomeScreen} />
+              <Route exact path="/about" component={AboutScreen} />
+              <Route exact component={NotFoundScreen} />
+            </Switch>
+          </Row>
+        </Container>
+        </section>
 
         <Footer />
       </div>

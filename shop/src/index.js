@@ -7,6 +7,9 @@ import Store from './Store'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css'
+
 const rootElement = document.getElementById('root')
 
 ReactDOM.render(
