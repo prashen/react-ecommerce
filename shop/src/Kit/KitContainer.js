@@ -2,9 +2,9 @@
 import styled from 'styled-components';
 
 const AppContainer = styled.section`
-  max-width:1140px;
-  margin:0 auto;
-  padding:0 1.0rem;
+  margin: 0 auto;
+  max-width: 1170px;
+  width: 86.7%;
 
   @media (max-width: 768px) {
     width:100%;

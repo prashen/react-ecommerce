@@ -2,15 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { Provider } from 'react-redux'
+import WebFont from 'webfontloader';
 import Store from './Store'
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
 
 const rootElement = document.getElementById('root')
+WebFont.load({
+  google: {
+    families: ['Droid Sans', 'Chilanka', 'Oswald']
+  }
+});
 
 ReactDOM.render(
   <Provider store={Store}>

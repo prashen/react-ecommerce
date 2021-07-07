@@ -4,6 +4,38 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+/* Project Custom 
+   ========================================================================== */
+  html {
+    font-size: 62.5%;
+  }
+
+  :root {
+    font-size: 10px;
+  }
+
+  body {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  img {
+      max-width: 100%;
+  }
+
+  ul {
+    margin:0;
+    padding:0;
+    list-style: none;
+  }
+  li {
+    margin:0;
+    padding:0;
+  }
+
+  a:hover {
+    text-decoration:none;
+  }
  /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -29,9 +61,10 @@ html {
 
 body {
   height: 100%;   
-  overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
+  /* overflow: hidden;  makes the body non-scrollable (we will add scrolling to the sidebar and main content containers) */
   margin: 0px;  /*removes default style*/
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Alata', sans-serif;
+  /* height: 1000px; */
 }
 
 div#root {

@@ -1,4 +1,5 @@
 import {useSelector, useDispatch} from 'react-redux';
+import { Banner } from '../../Components'
 
 function HomeScreen(){
   const { 
@@ -6,9 +7,14 @@ function HomeScreen(){
   } = useSelector((state)=>({
     count:state.home.count
   }))
+
   const dispatch = useDispatch();
+
   return <div>
-    <button onClick={() => dispatch({
+
+    <Banner/>
+
+    {/* <button onClick={() => dispatch({
       type:'INCREMENT',
       
     })}>click +</button>
@@ -18,7 +24,7 @@ function HomeScreen(){
       
     })}>click -</button>
 
-    {count}
+    {count} */}
 
   </div>
 }

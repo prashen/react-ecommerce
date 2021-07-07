@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import GlobalStyle from '../global-styles';
 import {Container, Row} from 'react-bootstrap';
-import { Header, Footer } from '../Components'
+import { Header, Footer, Banner } from '../Components'
 import HomeScreen from '../Container/HomeScreen'
 import AboutScreen from '../Container/AboutScreen'
 import NotFoundScreen from '../Container/NotFoundScreen'
@@ -17,17 +17,13 @@ function AppNavigator() {
         <GlobalStyle />
         <Header />
 
-        <section className="container">
-        <Container fluid="lg">
-          <Row>
+        {/* <section className="container"> */}
             <Switch>
               <Route exact path="/" component={HomeScreen} />
               <Route exact path="/about" component={AboutScreen} />
               <Route exact component={NotFoundScreen} />
             </Switch>
-          </Row>
-        </Container>
-        </section>
+        {/* </section> */}
 
         <Footer />
       </div>

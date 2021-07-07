@@ -1,4 +1,5 @@
 import {useSelector, useDispatch} from 'react-redux';
+import { KitContainer } from '../../Kit'
 
 function AboutScreen(){
   const { 
@@ -7,10 +8,14 @@ function AboutScreen(){
     count:state.home.count
   }))
   const dispatch = useDispatch();
-  return <div>
-    About
+  return <section>
 
-  </div>
+  <KitContainer>
+
+    About
+  </KitContainer>
+
+  </section>
 }
 
 export default AboutScreen;
