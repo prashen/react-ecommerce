@@ -14,7 +14,7 @@ function AppNavigator() {
   return (
     <Router>
       <div>
-        <GlobalStyle />
+        {/* <GlobalStyle /> */}
         <Header />
 
         {/* <section className="container"> */}

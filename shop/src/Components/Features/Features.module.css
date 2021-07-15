@@ -1,0 +1,40 @@
+.featureItemWrap {
+  text-align: center;
+  background-color: var(--white);
+  padding:20px 20px;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  /* border: 1px solid #000; */
+}
+
+.featureItemTitle h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.featureItemListWrap {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #C5C5C5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.featureItemImageWrap{
+  /* border: 1px solid #000; */
+  width:200px;
+  height:200px;
+  display: flex;
+  align-items: center;
+}
+
+.featureItemListLink {
+  color:#979797;
+  font-size: 14px;
+}
+
+.featureItemWrap.secondFeature {
+  background-color: #F0F0F0;
+}

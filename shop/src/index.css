@@ -1,5 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Poppins:wght@900&display=swap');
-.container {
-  /* border:1px solid black; */
-  height:80vh;
+:root {
+  /* font-size: 10px; */
 }
+
+html {
+  /* font-size: 62.5%; */
+}
+
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+li {
+  margin:0;
+  padding:0;
+}
+
+a:hover {
+  text-decoration:none;
+}
+/* .container {
+  margin: 0 auto;
+  max-width: 1170px;
+  width: 86.7%;
+} */
+
+/* :local(.headerBottomRight){
+  background-color: red;
+} */
+
+/* .input-group.searchForm {
+  width:50%!important;
+  height: 30px;
+} */
+
+/* body {
+  background-color: orangered;
+} */
+/* header section.headerTopWrap {
+  background-color:orange;
+} */
+/* section.headerTopWrap {
+  
+} */

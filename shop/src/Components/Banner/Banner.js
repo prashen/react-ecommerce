@@ -1,123 +1,131 @@
-import React, { useState, useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink
-} from "react-router-dom";
-import styled from 'styled-components';
-import { KitContainer } from '../../Kit'
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Fade } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
-import styles from './Banner.module.css'
+import React from 'react';
+import { Carousel, Button } from 'react-bootstrap';
+// icons ######
+import Icon from 'react-icons-kit';
+import { longArrowRight } from 'react-icons-kit/fa/longArrowRight'
 
+import sliderOneUrl from '../../Assets/Images/slider-1.jpg';
+import sliderTwoUrl from '../../Assets/Images/slider-2.jpg';
+import sliderThreeUrl from '../../Assets/Images/slider-3.jpg';
+import sliderFourUrl from '../../Assets/Images/slider-4.jpg';
+import sliderFiveUrl from '../../Assets/Images/slider-5.jpg';
+import styles from './Banner.module.css';
 
-const BannerWrap = styled.section`
-    width: 100%;
-    max-height: 600px;
-    position: relative;
-`
+const windowHeight = window.innerHeight;
 
-const BannerItem = styled.div`
-    display: flex;
-    width: 100%;
-
-    > div {
-        width: 75%;
-    }
-
-    > div img {
-        width: 100%;
-        max-height: 600px;
-        object-fit: cover;
-    }
-
-    p {
-        width: 25%;
-        font-size: 1em;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        background: #adceed;
-    }
-`
-
-const IndicatorStyledWrap = styled.div`
-    cursor: pointer;
-    padding: 10px;
-    text-align: center;
-    border: 1px #666 solid;
-    height: 10px;
-    width: 10px;
-    background-color:red;
-    border-radius: 50%;
-    /* position: absolute; */
-    /* left: 0;
-    bottom: 0; */
-    /* width: 100%; */
-    z-index: 9999;
-    background-color: #fff;
-    /* border-radius: 50%; */
-
-    ul{
-        
-    }
-
-    .active {
-        color: #fff;
-        background: #666;
-    }
-`
-
-const zoomOutProperties = {
-    indicators: true,
-    scale: 0.4,
-    indicators: i => (<IndicatorStyledWrap>{i + 1}</IndicatorStyledWrap>)
-  }
-
-const fadeImages = [
-    "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-      "https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80",
-      "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-      "https://images.unsplash.com/photo-1444525873963-75d329ef9e1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
-  ];
-
-function Banner() {
+function BannerComponent() {
 
   return (
-  <BannerWrap>
-    <div>
-      <div className="slide-container">
-        <Fade {...zoomOutProperties}>
-          <BannerItem>
-            <div>
-                <img src={fadeImages[0]} />
-                </div>
-                <p>First Slide</p>
-          </BannerItem>
-            
-          
-          <BannerItem>
-            <p>Second Slide</p>
-            <div>
-              <img src={fadeImages[1]} />
-            </div>
-            </BannerItem>
-            <BannerItem>
-            <div>
-              <img src={fadeImages[2]} />
-            </div>
-            <p>Third Slide</p>
-            </BannerItem>
-        </Fade>
-      </div>
-    </div>
+    <Carousel fade={true} interval={null} style={{
+      maxHeight:windowHeight - 127,
+      overflow:'hidden'
+    }}>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={sliderOneUrl}
+          alt="First slide"
+        />
+        <Carousel.Caption className={styles.bannerTextWrap}>
+          <h2>Sportswear for girls</h2>
+          <span className={styles.uptoText}>Up to</span>
 
-  </BannerWrap>)
+          <span className={styles.offText}>70% off</span>
+
+          <div className={styles.shopNowButtonWrap}>
+            <div><Icon icon={longArrowRight} /></div>
+            <Button variant="primary" size="lg" className={styles.shopNowButton}>
+              Shop Now</Button>
+          </div>
+
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={sliderTwoUrl}
+          alt="Second slide"
+        />
+        <Carousel.Caption className={styles.bannerTextWrap}>
+          <h2>Sportswear for girls</h2>
+          <span className={styles.uptoText}>Up to</span>
+
+          <span className={styles.offText}>70% off</span>
+
+          <div className={styles.shopNowButtonWrap}>
+            <div><Icon icon={longArrowRight} /></div>
+            <Button variant="primary" size="lg" className={styles.shopNowButton}>
+              Shop Now</Button>
+          </div>
+
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={sliderThreeUrl}
+          alt="Three slide"
+        />
+        <Carousel.Caption className={styles.bannerTextWrap}>
+          <h2>Sportswear for girls</h2>
+          <span className={styles.uptoText}>Up to</span>
+
+          <span className={styles.offText}>70% off</span>
+
+          <div className={styles.shopNowButtonWrap}>
+            <div><Icon icon={longArrowRight} /></div>
+            <Button variant="primary" size="lg" className={styles.shopNowButton}>
+              Shop Now</Button>
+          </div>
+
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={sliderFourUrl}
+          alt="Four slide"
+        />
+        <Carousel.Caption className={styles.bannerTextWrap}>
+          <h2>Sportswear for girls</h2>
+          <span className={styles.uptoText}>Up to</span>
+
+          <span className={styles.offText}>70% off</span>
+
+          <div className={styles.shopNowButtonWrap}>
+            <div><Icon icon={longArrowRight} /></div>
+            <Button variant="primary" size="lg" className={styles.shopNowButton}>
+              Shop Now</Button>
+          </div>
+
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={sliderFiveUrl}
+          alt="Five slide"
+        />
+        <Carousel.Caption className={styles.bannerTextWrap}>
+          <h2>Sportswear for girls</h2>
+          <span className={styles.uptoText}>Up to</span>
+
+          <span className={styles.offText}>70% off</span>
+
+          <div className={styles.shopNowButtonWrap}>
+            <div><Icon icon={longArrowRight} /></div>
+            <Button variant="primary" size="lg" className={styles.shopNowButton}>
+              Shop Now</Button>
+          </div>
+
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+  )
 }
 
-export { Banner };
+export const Banner = React.memo(BannerComponent);

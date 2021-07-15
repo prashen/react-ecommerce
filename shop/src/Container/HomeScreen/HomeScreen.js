@@ -1,5 +1,5 @@
 import {useSelector, useDispatch} from 'react-redux';
-import { Banner } from '../../Components'
+import { Banner, Features, BookLane, CustomiseKit } from '../../Components'
 
 function HomeScreen(){
   const { 
@@ -13,6 +13,14 @@ function HomeScreen(){
   return <div>
 
     <Banner/>
+
+    <Features />
+
+    <BookLane />
+
+    <CustomiseKit/>
+
+  
 
     {/* <button onClick={() => dispatch({
       type:'INCREMENT',

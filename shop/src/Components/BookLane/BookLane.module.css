@@ -1,0 +1,43 @@
+.bookLaneWrap {
+  text-align: center;
+  background-color: #0F0A4A;
+  padding:60px 50px;
+  font-family: 'Oswald', sans-serif;
+  color:white;
+  /* border: 1px solid #000; */
+}
+
+.bookLaneContentWrap h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.bookLaneContentWrap p {
+  color: #AAAAAA;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #C5C5C5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 0; */
+}
+
+.bookLaneButton {
+
+}
+
+.bookLaneImageWrap{
+  /* border: 1px solid #000; */
+  height:400px;;
+  overflow: hidden;
+  /* height:200px; */
+  display: flex;
+  align-items: center;
+}
+
+.bookLaneImage {
+  width:100%;
+}
